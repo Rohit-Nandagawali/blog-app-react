@@ -1,6 +1,20 @@
 import { useState } from "react";
 import "./Home.css"
 
+const BlogList = ({blogs,title}) => {
+    return ( 
+        <div className="blogList">
+            <h2>{title}</h2>
+            {blogs.map((blog)=>(
+                <div className="blog-preview" key={blog.id}>
+                    <h2>{blog.title}</h2>
+                    <p>Written by {blog.author}</p>
+                </div>
+            ))}
+        </div>
+     );
+}
+ 
 const Home = () => {
   
     const [blogs,setBlog] = useState([
@@ -10,12 +24,7 @@ const Home = () => {
     ])
     return ( 
         <div className="Home">
-            {blogs.map((blog)=>(
-                <div className="blog-preview" key={blog.id}>
-                    <h2>{blog.title}</h2>
-                    <p>Written by {blog.author}</p>
-                </div>
-            ))}
+          <BlogList blogs={blogs} title="All blogs"/>
         </div>
      );
 }
