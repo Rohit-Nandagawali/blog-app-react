@@ -1,41 +1,14 @@
 
 import './App.css';
+import Home from './Home';
+import Navbar from './Navbar';
 
-function App() {
-  const title = "welcome to the new blog"
-  const likes = 50
-
-  const person = 
-  {
-    name : "rohit",
-    age : 19
-  }
-  const link = "https://facebook.com"
-
+function App() { 
   return (
     <div className="App">
-
-
+      <Navbar/>
       <div className="content">
-        {/* dynamic values in component */}
-        <h1>{title}</h1>
-        <p>liked {likes} times</p>
-        {/* connot directly display object */}
-        {/* <p>{person}</p> */}
-        <p>Name : {person.name}, Age : {person.age}</p>
-
-        {/* output multiple values */}
-        {/* values */}
-        <p>{15}</p>
-        {/* string */}
-        <p>{"this is a string"}</p>
-        {/* expressions */}
-        <p>{Math.random() *5}</p>
-
-        {/* dynamic values in attributes */}
-        <a href={link}>go to facebook</a>
-
-
+        <Home/>
       </div>
     </div>
   );
