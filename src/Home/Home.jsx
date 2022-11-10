@@ -2,20 +2,20 @@ import { useState } from "react";
 import "./Home.css"
 
 const Home = () => {
-    // we can assign new value to the variable but changes will not affect on the webpages
-    // we can change the state of the variable using useState hook
-    // const [varibale, functionToSetVariable] = useEffect(initial value)
-
-    const [name,setName] = useState('rohit')
-
-    const handleClick=()=>{
-        setName('mothit')
-    }
+  
+    const [blogs,setBlog] = useState([
+        {title:"my new website", preview:"lorem epsum...",author:"mario",id:1},
+        {title:"this is unreal", preview:"lorem epsum...",author:"mario",id:2},
+        {title:"react js is awsome", preview:"lorem epsum...",author:"mario",id:3},
+    ])
     return ( 
         <div className="Home">
-            <h1>homepage</h1>
-            <p>{name}</p>
-            <button onClick={handleClick}>click me</button>
+            {blogs.map((blog)=>(
+                <div className="blog-preview" key={blog.id}>
+                    <h2>{blog.title}</h2>
+                    <p>Written by {blog.author}</p>
+                </div>
+            ))}
         </div>
      );
 }
