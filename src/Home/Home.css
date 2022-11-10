@@ -4,16 +4,23 @@
     min-width: 800px;
 
 }
+.title{
+    color: var(--primary-text-color);
+}
 .blog-preview {
     padding: 10px 16px;
     margin: 20px 0;
-    border-bottom: 1px solid #fafafa;
+    border-radius: 9px;
+    background-color: #1D1D1D;
 }
 .blog-preview:hover {
-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    box-shadow: 1px 3px 5px rgba(211, 211, 211, 0.356);
 }
 .blog-preview h2 {
-font-size: 20px;
-color: #f1356d;
-margin-bottom: 8px;
+    font-size: 20px;
+    color:var(--main-color);
+    margin-bottom: 8px;
+}
+.blog-preview p {
+    color:var(--primary-text-color);
 }
