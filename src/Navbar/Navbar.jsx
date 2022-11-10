@@ -1,6 +1,7 @@
+import "./Navbar.css"
 const Navbar = () => {
     return ( 
-        <nav className="navbar">
+        <nav className="Navbar">
             <h1>the blog app</h1>
             <div className="links">
                 <a href="/">Home</a>
