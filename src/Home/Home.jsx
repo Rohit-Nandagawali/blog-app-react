@@ -19,11 +19,7 @@ const BlogList = ({blogs,title,handleDelete}) => {
  
 const Home = () => {
   
-    const [blogs,setBlog] = useState([
-        {title:"my new website", preview:"lorem epsum...",author:"mario",id:1},
-        {title:"this is unreal", preview:"lorem epsum...",author:"rohit",id:2},
-        {title:"react js is awsome", preview:"lorem epsum...",author:"mario",id:3},
-    ])
+    const [blogs,setBlog] = useState(null)
 
     const handleDelete = (id) =>{
         const newBlogs = blogs.filter(blog =>blog.id !== id)
@@ -34,13 +30,22 @@ const Home = () => {
     // we can also set to run useEffect hook when specific state is changes [name]
     // if it is set to [] empty dependecies then useEffect will be called on the first render
     useEffect(()=>{
-        console.log("useeffect is called");
-    })
+        fetch("http://localhost:8000/blogs") //fetch info from this and then
+        .then(responce =>{              //then get a responce
+            return responce.json()      //convert that json file into javascript object
+        })
+        .then(
+            data =>{
+                setBlog(data)
+            }
+        )
+    },[]) //this will be called only once and first time
+
 
     return ( 
         <div className="Home">
-          <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete}/>
-          <BlogList blogs={blogs.filter((blog)=>blog.author === 'mario')} title="Mario's blogs"/>
+          {blogs && <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete}/>}
+          {/* <BlogList blogs={blogs.filter((blog)=>blog.author === 'mario')} title="Mario's blogs"/> */}
         </div>
      );
 }
