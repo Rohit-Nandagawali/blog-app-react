@@ -1,13 +1,14 @@
 .Home{
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
-    min-width: 800px;
+    max-width: 800px;
+    margin: 0 auto;
 
 }
 .title{
     color: var(--primary-text-color);
 }
-.loader{
+.text-color{
     color: var(--main-color);
 }
 .blog-preview {
