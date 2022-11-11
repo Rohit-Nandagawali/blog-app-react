@@ -7,6 +7,9 @@
 .title{
     color: var(--primary-text-color);
 }
+.loader{
+    color: var(--main-color);
+}
 .blog-preview {
     cursor: pointer;
     padding: 10px 16px;
