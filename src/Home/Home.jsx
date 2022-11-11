@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import "./Home.css"
 
@@ -28,6 +29,14 @@ const Home = () => {
         const newBlogs = blogs.filter(blog =>blog.id !== id)
         setBlog(newBlogs)
     }
+
+    // called everytime when the state changes
+    // we can also set to run useEffect hook when specific state is changes [name]
+    // if it is set to [] empty dependecies then useEffect will be called on the first render
+    useEffect(()=>{
+        console.log("useeffect is called");
+    })
+
     return ( 
         <div className="Home">
           <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete}/>
