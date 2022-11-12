@@ -10,7 +10,7 @@ const BlogList = ({blogs,title,handleDelete}) => {
                 <div className="blog-preview" key={blog.id}>
                     <h2>{blog.title}</h2>
                     <p>Written by {blog.author}</p>
-                    <button onClick={()=>handleDelete(blog.id)}>delete</button>
+                    {/* <button onClick={()=>handleDelete(blog.id)}>delete</button> */}
                 </div>
             ))}
         </div>
@@ -20,13 +20,6 @@ const BlogList = ({blogs,title,handleDelete}) => {
 const Home = () => {
   
     const {data : blogs,isPending,error} = useFetch("http://localhost:8000/blogs")
-
-    const handleDelete = (id) =>{
-        const newBlogs = blogs.filter(blog =>blog.id !== id)
-        // setBlog(newBlogs)
-    }
-
-    
 
     return ( 
         <div className="Home">
