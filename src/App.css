@@ -3,5 +3,9 @@
   flex-direction: column;
   background-color: #0C0C0C;
   height: 100vh;
+  font-family: 'Quicksand';
 }
 
+.content{
+  margin: 0 auto;
+}
