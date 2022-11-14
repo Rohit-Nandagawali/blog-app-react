@@ -1,0 +1,8 @@
+.BlogDetails{
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+article h2,p,div{
+    color: var(--primary-text-color);
+}
