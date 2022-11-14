@@ -5,6 +5,7 @@ import Create from '../src/Create/Create';
 import Navbar from "../src/Navbar/Navbar" 
 import BlogDetails from "../src/BlogDetails/BlogDetails" 
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import PageNotFound from './PageNotFound/PageNotFound';
 
 function App() { 
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/blogs/:id">
               <BlogDetails/>
+            </Route>
+            <Route path="*">
+              <PageNotFound/>
             </Route>
           </Switch>
         </div>

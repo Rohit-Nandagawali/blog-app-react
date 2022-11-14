@@ -13,6 +13,6 @@ code {
     monospace;
 }
 :root{
-  --primary-text-color : #E5E5E5;
   --main-color:#03dac6;
+  --primary-text-color : #E5E5E5;
 }
