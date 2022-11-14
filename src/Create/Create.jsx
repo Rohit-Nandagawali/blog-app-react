@@ -1,11 +1,13 @@
 import './Create.css'
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 const Create = () => {
 
     const [title,setTitle] = useState('')
     const [body,setBody] = useState('')
     const [author,setAuthor] = useState('Mario')
     const [isPending,setIsPending]= useState(false)
+    const history = useHistory()
     
     const handleSubmit= (e)=>{
         e.preventDefault()
@@ -16,9 +18,12 @@ const Create = () => {
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(blog)
-        }).then(()=>{console.log("new blog added");})
+        }).then(()=>{
+            console.log("new blog added");
+            setIsPending(false)
+            history.push("/") //this will directly redirect page to the '/'
+            })
 
-        setIsPending(false)
     }
 
     return ( 
