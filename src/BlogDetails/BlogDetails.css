@@ -1,0 +1,24 @@
+.BlogDetails{
+    max-width: 800px;
+    min-width: 800px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+article p,div{
+    color: var(--primary-text-color);
+}
+article h2{
+    color: var(--main-color);
+}
+.BlogDetails article button{
+    font-family: "Quicksand";
+    cursor: pointer;
+    padding: 10px;
+    color: #0C0C0C;
+    font-weight: 700;
+    border-radius: 4px;
+    width: 100px;
+    margin: 8px 0;
+    align-self: center;
+    background-color: #CC2F43;
+}
