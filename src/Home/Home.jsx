@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 import "./Home.css"
 
@@ -8,8 +9,11 @@ const BlogList = ({blogs,title,handleDelete}) => {
             <h2 className="title">{title}</h2>
             {blogs.map((blog)=>(
                 <div className="blog-preview" key={blog.id}>
-                    <h2>{blog.title}</h2>
-                    <p>Written by {blog.author}</p>
+                    <Link  to={`/blogs/${blog.id}`}>
+                        <h2>{blog.title}</h2>
+                        <p>Written by {blog.author}</p>
+                    </Link>
+
                     {/* <button onClick={()=>handleDelete(blog.id)}>delete</button> */}
                 </div>
             ))}

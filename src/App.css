@@ -4,6 +4,7 @@
   background-color: #0C0C0C;
   height: 100vh;
   font-family: 'Quicksand';
+  color: var(--main-color);
 }
 
 .content{

@@ -24,7 +24,7 @@
     font-weight: 800;
     
 }
-.links > a:hover {
+.links > a:hover,a.active {
     background-color: var(--main-color);
     color: #0C0C0C;
     border-radius: 4px;

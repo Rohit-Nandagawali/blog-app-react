@@ -1,16 +1,19 @@
-.Home{
+.Home {
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
-    max-width: 800px;
+    min-width: 800px;
     margin: 0 auto;
 
 }
-.title{
+
+.title {
     color: var(--primary-text-color);
 }
-.text-color{
+
+.text-color {
     color: var(--main-color);
 }
+
 .blog-preview {
     cursor: pointer;
     padding: 10px 16px;
@@ -18,14 +21,21 @@
     border-radius: 9px;
     background-color: #1D1D1D;
 }
+
+.blog-preview a {
+    text-decoration: none;
+}
+
 .blog-preview:hover {
     box-shadow: 1px 3px 5px rgba(211, 211, 211, 0.356);
 }
+
 .blog-preview h2 {
     font-size: 20px;
-    color:var(--main-color);
+    color: var(--main-color);
     margin-bottom: 8px;
 }
+
 .blog-preview p {
-    color:var(--primary-text-color);
+    color: var(--primary-text-color);
 }
